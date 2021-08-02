@@ -8,7 +8,7 @@ import { fontClasses } from "../../styles/fontClasses";
 const TemplateScreen: React.FC<{ pageName: string }> = ({ pageName }) => {
     return (
         <SafeAreaView style={[styles.container]}>
-            <StatusBar style="auto" />
+            {/* <StatusBar style="auto" /> */}
             <Text style={[fontClasses.extraBold, styles.textColor]}>
                 {pageName}
             </Text>

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+
 import { useFonts } from "expo-font";
 
 import { Provider } from "react-redux";

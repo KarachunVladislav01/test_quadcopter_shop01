@@ -1,7 +1,13 @@
 import * as React from "react";
-import { StyleSheet, SafeAreaView } from "react-native";
+import {
+    StyleSheet,
+    SafeAreaView,
+    StatusBar as StatusBarAndroid,
+    Platform,
+} from "react-native";
 import { StatusBar } from "expo-status-bar";
 
+import { styleConstants } from "../../styles/constants";
 import theme from "../../styles/theme";
 
 import Header from "../Header";
@@ -12,7 +18,10 @@ import ProductsMenu from "../ProductsMenu";
 const Home = () => {
     return (
         <SafeAreaView style={[styles.container]}>
-            <StatusBar style="auto" />
+            <StatusBar
+                style="auto"
+                backgroundColor={theme.backgroundColorGrey}
+            />
             <Header />
             <RecomendationCard />
 
@@ -28,7 +37,7 @@ export default Home;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-
+        paddingTop: styleConstants.paddingTop,
         backgroundColor: theme.backgroundColorGrey,
     },
 });
