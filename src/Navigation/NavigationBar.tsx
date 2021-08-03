@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { styleConstants } from "../styles/constants";
-import { _24, _96 } from "../constants/sizes";
+import { _12, _24, _96 } from "../constants/sizes";
 
 import { SCREENS } from "./constants";
 
@@ -42,7 +42,7 @@ const NavigationBar = ({}) => {
                     style: [styles.container],
                     showLabel: false,
                     tabStyle: [styles.tab],
-                    safeAreaInsets: { top: _24 },
+                    // safeAreaInsets: { top: _24 },
                 }}
             >
                 <Tab.Screen
@@ -118,10 +118,10 @@ const styles = StyleSheet.create({
         shadowOpacity: styleConstants.shadowOpacity,
         shadowOffset: styleConstants.shadowOffset,
         shadowRadius: styleConstants.shadowRadius,
-        elevation: 0,
+        elevation: 20,
     },
     tab: {
         display: "flex",
-        paddingBottom: _24,
+        paddingBottom: _12,
     },
 });

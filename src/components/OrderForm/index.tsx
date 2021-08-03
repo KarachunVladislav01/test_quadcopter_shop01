@@ -67,11 +67,9 @@ const OrderForm: React.FC<{ setIsModalVisible: (value: boolean) => void }> = ({
             />
             <TextInputMask
                 ref={phoneNumberRef}
-                type={"cel-phone"}
+                type={"custom"}
                 options={{
-                    maskType: "BRL",
-                    withDDD: true,
-                    dddMask: "+375 (99) 999-99-99",
+                    mask: "+375 (99) 999-99-99",
                 }}
                 value={phoneNumber}
                 onChangeText={setPhoneNumberHandler}
@@ -85,11 +83,11 @@ const OrderForm: React.FC<{ setIsModalVisible: (value: boolean) => void }> = ({
                         ? styles.inputErrorColor
                         : styles.inputDefaultColor,
                 ]}
-                defaultValue={t.defaultPhoneCode}
                 autoCompleteType="tel"
                 dataDetectorTypes="phoneNumber"
                 keyboardType="phone-pad"
                 textContentType="telephoneNumber"
+                maxLength={19}
             />
             <TestButton label={t.order} onPress={sendOrderData} />
         </View>
