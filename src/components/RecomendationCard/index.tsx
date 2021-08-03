@@ -63,6 +63,8 @@ const styles = StyleSheet.create({
         shadowOpacity: styleConstants.shadowOpacity,
         shadowOffset: styleConstants.shadowOffset,
         shadowRadius: styleConstants.shadowRadius,
+
+        elevation: 20,
     },
     img: {
         position: "absolute",

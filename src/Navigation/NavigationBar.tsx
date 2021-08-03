@@ -16,24 +16,6 @@ const Tab = createBottomTabNavigator();
 const focusedIcon = "Focused";
 const defaultIcon = "Default";
 
-// const TabScreen = ({ name, component, iconName }) => {
-//     return (
-//         <Tab.Screen
-//             name={name}
-//             children={component}
-//             options={{
-//                 tabBarIcon: ({ focused }) => (
-//                     <Icon
-//                         name={`${iconName}${
-//                             focused ? focusedIcon : defaultIcon
-//                         }`}
-//                     />
-//                 ),
-//             }}
-//         />
-//     );
-// };
-
 const NavigationBar = ({}) => {
     return (
         <>
@@ -42,7 +24,6 @@ const NavigationBar = ({}) => {
                     style: [styles.container],
                     showLabel: false,
                     tabStyle: [styles.tab],
-                    // safeAreaInsets: { top: _24 },
                 }}
             >
                 <Tab.Screen
